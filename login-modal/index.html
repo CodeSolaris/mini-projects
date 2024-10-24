@@ -4,11 +4,110 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Template</title>
+    <title>log in</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playwrite+DE+Grund:wght@100..400&family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <h1 class="w-max p-3 mx-auto bg-neutral-900 text-amber-700 ">were</h1>
+    <!-- global container -->
+    <div class="flex h-screen items-center justify-center bg-rose-50">
+      <!-- card container -->
+      <div
+        class="relative m-6 flex flex-col space-y-10 rounded-2xl bg-white shadow-2xl md:m-0 md:flex-row md:space-y-0"
+      >
+        <!-- left side -->
+        <div class="p-6 md:p-20">
+          <!-- top content -->
+          <h2 class="mb-5 font-mono text-4xl font-bold">Log In</h2>
+          <p class="mb-12 max-w-sm font-sans font-light text-gray-600">
+            Log In to your account to upload or download pictures, video or
+            music
+          </p>
+          <input
+            type=" text"
+            class="w-full rounded-md border border-gray-300 p-6 placeholder:font-sans placeholder:font-light"
+            placeholder="Enter your email address"
+          />
+          <!-- middle content -->
+          <div
+            class="mt-6 flex flex-col items-center justify-between space-y-6 md:flex-row md:space-y-0"
+          >
+            <div class="to-cyan-700 font-thin">Forgot password</div>
+            <button
+              class="flex w-full items-center justify-center space-x-4 rounded-md border bg-cyan-700 p-6 px-9 font-sans font-bold text-white shadow-sm shadow-cyan-100 transition duration-150 hover:-translate-y-0.5 hover:bg-opacity-90 hover:shadow-2xl md:w-auto"
+            >
+              <span>Next</span>
+              <svg
+                class="w-7"
+                stroke="#fff"
+                width="24"
+                height="24"
+                xmlns="http://www.w3.org/2000/svg"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              >
+                <path
+                  d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+                />
+              </svg>
+            </button>
+          </div>
+          <!-- border -->
+          <div class="mt-12 border-b border-b-gray-300"></div>
+          <!-- bottom content -->
+          <p class="py-6 text-center text-sm font-thin text-gray-400">
+            or log in with
+          </p>
+          <!-- bottom buttons container -->
+          <div
+            class="flex flex-col space-x-0 space-y-6 md:flex-row md:space-x-4 md:space-y-0"
+          >
+            <button
+              class="flex items-center justify-center space-x-3 rounded border bg-gray-300 py-2 shadow-sm transition duration-150 hover:-translate-y-0.5 hover:shadow-lg md:w-1/2"
+            >
+              <img class="w-9" src="src/assets/images/facebook.png" alt="" />
+              <span class="font-thin">Facebook</span>
+            </button>
+            <button
+              class="flex items-center justify-center space-x-3 rounded border bg-gray-300 py-2 shadow-sm transition duration-150 hover:-translate-y-0.5 hover:shadow-lg md:w-1/2"
+            >
+              <img class="w-9" src="src/assets/images/google.png" alt="" />
+              <span class="font-thin">Google</span>
+            </button>
+          </div>
+        </div>
+        <!-- right side -->
+        <img
+          class="hidden w-[430px] md:block"
+          src="src/assets/images/image.jpg"
+          alt=""
+        />
+        <!-- close-button -->
+        <div
+          class="group absolute -top-4 right-6 transition duration-150 md:top-6"
+        >
+          <svg
+            class="h-6 w-6 group-hover:scale-110 group-hover:stroke-gray-500 md:stroke-stone-700"
+            clip-rule="evenodd"
+            fill-rule="evenodd"
+            stroke-linejoin="round"
+            stroke-miterlimit="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m12.002 2.005c5.518 0 9.998 4.48 9.998 9.997 0 5.518-4.48 9.998-9.998 9.998-5.517 0-9.997-4.48-9.997-9.998 0-5.517 4.48-9.997 9.997-9.997zm0 1.5c-4.69 0-8.497 3.807-8.497 8.497s3.807 8.498 8.497 8.498 8.498-3.808 8.498-8.498-3.808-8.497-8.498-8.497zm0 7.425 2.717-2.718c.146-.146.339-.219.531-.219.404 0 .75.325.75.75 0 .193-.073.384-.219.531l-2.717 2.717 2.727 2.728c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.384-.073-.53-.219l-2.729-2.728-2.728 2.728c-.146.146-.338.219-.53.219-.401 0-.751-.323-.751-.75 0-.192.073-.384.22-.531l2.728-2.728-2.722-2.722c-.146-.147-.219-.338-.219-.531 0-.425.346-.749.75-.749.192 0 .385.073.531.219z"
+              fill-rule="nonzero"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
   </body>
 
   <script type="module" src="src/js/index.js"></script>
