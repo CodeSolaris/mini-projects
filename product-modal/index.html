@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .block {
+        background: #3498db;
+        height: 100px;
+        margin: 10px 0;
+        width: 0;
+        opacity: 0;
+        transition: width 0.8s ease-out, opacity 0.3s ease-in;
+      }
+
+      .block.animate {
+        width: 100%;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="block">Блок 1</div>
+      <div class="block">Блок 2</div>
+      <div class="block">Блок 3</div>
+    </div>
+
+    <script>
+      const blocks = document.querySelectorAll(".block");
+
+      function animateBlock(index) {
+        if (index >= blocks.length) return;
+
+        const block = blocks[index];
+        block.classList.add("animate");
+
+        // Ждём завершения анимации ширины
+        setTimeout(() => {
+          // Запускаем анимацию следующего блока
+          animateBlock(index + 1);
+        }, 800); // Время должно совпадать с transition-duration для width
+      }
+
+      // Запускаем анимацию первого блока
+      animateBlock(0);
+    </script>
+  </body>
+</html>
